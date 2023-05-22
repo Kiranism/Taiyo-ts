@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* sizing of map  */
+
+.leaflet-container {
+  height: 100vh;
+}
