@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useGetCountries } from "../queries/CountryQueries";
 import Map from "../components/Map";
 

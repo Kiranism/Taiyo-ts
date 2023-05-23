@@ -6,6 +6,12 @@ type Contact = {
   lastName: string;
   status: string;
 };
+type EditContact = {
+  id?: number;
+  newFirstName: string;
+  newLastName: string;
+  newStatus: string;
+};
 
 type ContactState = {
   contacts: Contact[];
@@ -30,13 +36,14 @@ const contactSlice = createSlice({
       const id = action.payload;
       state.contacts = state.contacts.filter((item) => item.id !== id);
     },
-    editContact: (state, action: PayloadAction<Contact>) => {
-      const { id, firstName, lastName, status } = action.payload;
+    editContact: (state, action: PayloadAction<EditContact>) => {
+      const { id, newFirstName, newLastName, newStatus } = action.payload;
       const contact = state.contacts.find((item) => item.id === id);
+      console.log("isContact", contact, action.payload);
       if (contact) {
-        contact.firstName = firstName;
-        contact.lastName = lastName;
-        contact.status = status;
+        contact.firstName = newFirstName;
+        contact.lastName = newLastName;
+        contact.status = newStatus;
       }
     },
   },

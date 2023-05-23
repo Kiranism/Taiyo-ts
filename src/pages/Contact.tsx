@@ -10,7 +10,7 @@ const Contact: FC<ContactProps> = ({}) => {
   console.log("contacts=>", contacts);
   const navigate = useNavigate();
   return (
-    <div className="container-sm flex flex-col items-center justify-center p-20 gap-10">
+    <div className="container-sm flex flex-col items-center justify-center p-4 sm:p-20 gap-10">
       <button
         onClick={() => navigate("/add")}
         type="button"

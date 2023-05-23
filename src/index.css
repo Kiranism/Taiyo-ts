@@ -5,5 +5,10 @@
 /* sizing of map  */
 
 .leaflet-container {
-  height: 100vh;
+  height: calc(100vh - 68px);
+}
+.text-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

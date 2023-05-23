@@ -1,15 +1,15 @@
 import React, { FC } from "react";
 import LineGraph from "../components/LineGraph";
-import { useGetCountries } from "../queries/CountryQueries";
+import { useGetCasesWithDate } from "../queries/CountryQueries";
 
 type GraphProps = {};
 
 const Graph: FC<GraphProps> = ({}) => {
-  const { isLoading, data } = useGetCountries();
+  const { isLoading, data } = useGetCasesWithDate();
   if (isLoading) return <h1>Loading...</h1>;
   return (
-    <div className="w-full h-96">
-      <LineGraph data={data} />
+    <div className="w-full h-[100%] p-10">
+      <LineGraph data={data.cases} />
     </div>
   );
 };

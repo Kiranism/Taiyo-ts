@@ -28,28 +28,34 @@ const CreateContact: FC<CreateContactProps> = ({}) => {
         Create Contact
       </h2>
       <form onSubmit={handleSubmit}>
-        <div className="bg-white max-w-xl mx-auto flex items-center justify-center flex-col gap-10 p-10">
-          <div className="flex gap-2 ">
-            <h2>First Name</h2>
+        <div className="bg-white max-w-xl mx-1 sm:mx-auto flex items-center justify-center  flex-col gap-10 p-4 sm:p-10">
+          <div className="flex gap-2 w-full">
+            <h2 className="flex-1  flex justify-center items-center">
+              First Name
+            </h2>
             <input
               type="text"
+              className="flex-1"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
             />
           </div>
-          <div className="flex gap-2">
-            <h2>Last Name</h2>
+          <div className="flex gap-2 w-full">
+            <h2 className="flex-1 flex justify-center items-center">
+              Last Name
+            </h2>
             <input
               type="text"
+              className="flex-1"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
             />
           </div>
-          <div className="flex gap-2 w-1/2 justify-between">
-            <div>
+          <div className="flex gap-2 w-full">
+            <div className="flex-1 justify-center items-center flex">
               <h2>Status</h2>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-1 flex-col ">
               <div className="flex items-center">
                 <input
                   type="radio"
@@ -75,7 +81,7 @@ const CreateContact: FC<CreateContactProps> = ({}) => {
                   className="form-radio mr-2"
                 />
                 <label htmlFor="inactive" className="cursor-pointer">
-                  Active
+                  Inactive
                 </label>
               </div>
             </div>

@@ -1,44 +1,30 @@
 import { FC } from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useLocation } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 type LayoutProps = {};
 
 const Layout: FC<LayoutProps> = () => {
+  const location = useLocation();
   const navLinks = [
-    { name: "CONTACT PAGE", href: "/" },
+    { name: "CONTACT", href: "/" },
     { name: "LINE GRAPH", href: "/graph" },
     { name: "MAP", href: "/map" },
   ];
 
+  const activePage = navLinks.find((item) => item.href === location.pathname);
+  console.log("tets", location, activePage);
   return (
     <>
       <div>
-        <h1 className="text-3xl font-bold text-white bg-sky-600 text-center p-4">
-          CONTACT PAGE
-        </h1>
+        <Header title={activePage?.name} />
       </div>
-      <div className="flex min-h-[calc(100vh-25px)] ">
-        <div className="w-1/5 bg-white">
-          <nav>
-            <ul>
-              {navLinks.map((item) => (
-                <li className="flex w-full">
-                  <NavLink
-                    to={item.href}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "font-bold text-white bg-black w-full p-2"
-                        : "p-2 w-full"
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+      <div className="flex max-h-[calc(100vh-68px)] min-h-[calc(100vh-68px)] ">
+        <div className="w-1/5 bg-white hidden sm:block">
+          <Sidebar navLinks={navLinks} />
         </div>
-        <div className="flex-1 bg-gray-100">
+        <div className="flex-1 bg-gray-300">
           <Outlet />
         </div>
       </div>
