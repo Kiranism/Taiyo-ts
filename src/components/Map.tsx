@@ -17,7 +17,7 @@ type MapProps = {
 };
 
 const Map: FC<MapProps> = ({ data }) => {
-  const icon = L.icon({ iconUrl: "/src/assets/marker-icon-2x.png" });
+  const icon = L.icon({ iconUrl: "/marker-icon.png" });
   console.log(data);
   return (
     <>
