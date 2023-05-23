@@ -4,9 +4,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "public": {
-    "directory": "public",
-    "rewrites": [{ "source": "/(.*)", "destination": "/$1" }]
-  }
+  ]
 }
