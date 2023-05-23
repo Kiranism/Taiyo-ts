@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addContact, editContact } from "../features/contact/contactSlice";
+import { editContact } from "../features/contact/contactSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 type EditContactProps = {};
 

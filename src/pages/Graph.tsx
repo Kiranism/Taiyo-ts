@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import LineGraph from "../components/LineGraph";
 import { useGetCasesWithDate } from "../queries/CountryQueries";
 

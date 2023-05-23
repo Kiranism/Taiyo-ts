@@ -7,8 +7,3 @@
 .leaflet-container {
   height: calc(100vh - 68px);
 }
-.text-nowrap {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}

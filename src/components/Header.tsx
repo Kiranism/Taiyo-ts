@@ -1,4 +1,4 @@
-import { FC, useState, useRef } from "react";
+import { FC, useState } from "react";
 import Sidebar from "./Sidebar";
 import { BiMenuAltLeft } from "react-icons/bi";
 type HeaderProps = {

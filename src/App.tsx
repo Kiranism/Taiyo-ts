@@ -4,7 +4,6 @@ import Contact from "./pages/Contact";
 import Graph from "./pages/Graph";
 import Leaflet from "./pages/Leaflet";
 import EditContact from "./pages/EditContact";
-import ViewContact from "./pages/ViewContact";
 import AddContact from "./pages/AddContact";
 
 function App() {

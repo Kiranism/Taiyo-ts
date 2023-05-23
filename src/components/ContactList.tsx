@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { RxAvatar } from "react-icons/rx";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../features/contact/contactSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 type ContactListProps = {
   id?: number;
   firstName: string;
@@ -18,7 +18,6 @@ const ContactList: FC<ContactListProps> = ({
   status,
 }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const handleDelete = () => {
     dispatch(deleteContact(id));
   };

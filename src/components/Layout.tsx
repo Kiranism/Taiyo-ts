@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Outlet, NavLink, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 
