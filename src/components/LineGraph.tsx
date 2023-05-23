@@ -41,8 +41,8 @@ const LineGraph: FC<LineGraphProps> = ({ data }) => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis tickFormatter={(value) => millify(value)} />
+          <XAxis dataKey="name" tickMargin={10} minTickGap={2} />
+          <YAxis tickFormatter={(value) => millify(value)} tickMargin={15} />
           <Tooltip />
           <Legend />
           <Line

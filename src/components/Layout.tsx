@@ -8,12 +8,14 @@ type LayoutProps = {};
 const Layout: FC<LayoutProps> = () => {
   const location = useLocation();
   const navLinks = [
-    { name: "CONTACT", href: "/" },
+    { name: "CONTACT", href: "/contact" },
     { name: "LINE GRAPH", href: "/graph" },
     { name: "MAP", href: "/map" },
-  ];
+  ];  
 
-  const activePage = navLinks.find((item) => item.href === location.pathname);
+  const activePage = navLinks.find((item) =>
+    location.pathname.startsWith(item.href)
+  );
   console.log("tets", location, activePage);
   return (
     <>

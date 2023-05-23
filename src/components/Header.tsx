@@ -6,7 +6,7 @@ type HeaderProps = {
 };
 
 const navLinks = [
-  { name: "CONTACT", href: "/" },
+  { name: "CONTACT", href: "/contact" },
   { name: "LINE GRAPH", href: "/graph" },
   { name: "MAP", href: "/map" },
 ];

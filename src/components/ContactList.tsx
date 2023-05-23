@@ -42,7 +42,7 @@ const ContactList: FC<ContactListProps> = ({
           {status.toUpperCase()}
         </button>
         <Link
-          to={`/edit/${id}`}
+          to={`/contact/edit/${id}`}
           state={{ data: { firstName, lastName, status, id } }}
           className="text-2xl"
         >

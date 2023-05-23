@@ -25,7 +25,7 @@ const EditContact: FC<EditContactProps> = ({}) => {
       newStatus,
     };
     dispatch(editContact(data));
-    navigate("/");
+    navigate("/contact");
     console.log(data);
   };
   return (

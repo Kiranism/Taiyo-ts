@@ -12,7 +12,7 @@ const Contact: FC<ContactProps> = ({}) => {
   return (
     <div className="container-sm flex flex-col items-center justify-center p-4 sm:p-20 gap-10">
       <button
-        onClick={() => navigate("/add")}
+        onClick={() => navigate("/contact/add")}
         type="button"
         className="rounded-md text-2xl bg-black px-3 py-2 font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
       >

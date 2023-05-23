@@ -13,7 +13,10 @@ const Graph: FC<GraphProps> = ({}) => {
     navigate("/error");
   }
   return (
-    <div className="w-full h-[100%] p-10">
+    <div className="w-full h-96 sm:h-[100%] p-2 sm:p-10">
+      <h2 className="text-xl font-semibold text-center my-10 sm:my-1">
+        A line graph showing the cases fluctuations
+      </h2>
       <LineGraph data={data.cases} />
     </div>
   );
