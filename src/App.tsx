@@ -5,6 +5,7 @@ import Graph from "./pages/Graph";
 import Leaflet from "./pages/Leaflet";
 import EditContact from "./pages/EditContact";
 import AddContact from "./pages/AddContact";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/edit/:id" element={<EditContact />} />
             <Route path="/map" element={<Leaflet />} />
             <Route path="/graph" element={<Graph />} />
+            <Route path="/error" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>

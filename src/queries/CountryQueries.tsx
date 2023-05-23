@@ -15,11 +15,9 @@ const getCasesWithDates = async () => {
 };
 
 export const useGetCountries = () => {
-  const { data, isLoading } = useQuery(["allCountries"], getAllCountries);
-  return { data, isLoading };
+  return useQuery(["allCountries"], getAllCountries);
 };
 
 export const useGetCasesWithDate = () => {
-  const { data, isLoading } = useQuery(["casesDates"], getCasesWithDates);
-  return { data, isLoading };
+  return useQuery(["casesDates"], getCasesWithDates);
 };
