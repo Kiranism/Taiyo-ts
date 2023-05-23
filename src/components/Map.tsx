@@ -26,10 +26,11 @@ const Map: FC<MapProps> = ({ data }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {data.map((item) => (
+        {data.map((item, index) => (
           <Marker
             icon={icon}
             position={[item.countryInfo.lat, item.countryInfo.long]}
+            key={index}
           >
             <Popup>
               <p className="mx-2 font-bold">Country Name : {item.country}</p>

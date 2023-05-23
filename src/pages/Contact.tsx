@@ -25,6 +25,7 @@ const Contact: FC<ContactProps> = ({}) => {
             lastName={contact.lastName}
             status={contact.status}
             id={contact.id}
+            key={contact.id}
           />
         ))
       ) : (

@@ -1,4 +1,4 @@
-import  { FC } from "react";
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 
 type SidebarProps = {
@@ -20,8 +20,8 @@ const Sidebar: FC<SidebarProps> = ({ navLinks, handleSideBarClose }) => {
       {" "}
       <nav>
         <ul>
-          {navLinks.map((item) => (
-            <li className="flex w-full">
+          {navLinks.map((item, index) => (
+            <li className="flex w-full" key={index}>
               <NavLink
                 to={item.href}
                 state={{ data: item.name }}
