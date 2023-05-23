@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 type MapProps = {
@@ -16,6 +17,7 @@ type MapProps = {
 };
 
 const Map: FC<MapProps> = ({ data }) => {
+  const icon = L.icon({ iconUrl: "/src/assets/marker-icon-2x.png" });
   console.log(data);
   return (
     <>
@@ -25,7 +27,10 @@ const Map: FC<MapProps> = ({ data }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {data.map((item) => (
-          <Marker position={[item.countryInfo.lat, item.countryInfo.long]}>
+          <Marker
+            icon={icon}
+            position={[item.countryInfo.lat, item.countryInfo.long]}
+          >
             <Popup>
               <p className="mx-2 font-bold">Country Name : {item.country}</p>
               <p className="mx-2 font-bold">Total Active : {item.active}</p>
